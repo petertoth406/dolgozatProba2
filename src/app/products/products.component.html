@@ -1,1 +1,24 @@
-<p>products works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Szerkesztés</th>
+            <th>Megtekintés</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.category}}</td>
+            <td>{{p.price}}</td>
+            <td><button (click)="nav(p.id)">Szerkesztés</button></td>
+            <td><button (click)="nav(p.id, true)">Megtekintés</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<router-outlet></router-outlet>

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { ReadProductComponent } from './read-product/read-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import {  HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UpdateProductComponent } from './update-product/update-product.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

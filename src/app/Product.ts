@@ -19,7 +19,7 @@ interface Dimension {
     qrCode: string;
   }
   
-  interface Product {
+ export interface Product {
     id: number;
     title: string;
     description: string;
@@ -44,7 +44,7 @@ interface Dimension {
     images: string[];
   }
   
-  interface ProductResponse {
+  export interface ProductResponse {
     products: Product[];
     total: number;
     skip: number;

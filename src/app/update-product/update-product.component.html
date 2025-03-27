@@ -1,1 +1,30 @@
-<p>update-product works!</p>
+<form [formGroup]="form">
+    <div>
+        <label>Id:</label>
+        <input formControlName="id">
+    </div>
+    <div>
+        <label>Title:</label>
+        <input formControlName="title">
+        <p class="error" *ngIf="form.controls['title'].invalid">A cím megadása kötelező</p>
+    </div>
+    <div>
+        <label>Description:</label>
+        <input formControlName="description">
+
+    </div>
+    <div>
+        <label >Category:</label>
+        <input formControlName="category">
+        <p class="error" *ngIf="form.controls['category'].invalid">Az kategória megadása kötelező, és 3 karakter hosszúnak kell lennie</p>
+    
+    </div>
+    <div>
+        <label>Price:</label>
+        <input formControlName="price">
+        <p class="error" *ngIf="form.controls['price'].invalid">Az ár megadása kötelező, és 0-nál nagyobb számnak kell lennie</p>
+    </div>
+    <button (click)="submit()">Save</button>
+</form>
+
+
